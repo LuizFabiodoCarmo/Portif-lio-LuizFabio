@@ -1,0 +1,79 @@
+.projects{
+  position: relative;
+  display: grid;
+  justify-content: center;
+  place-items: center;  
+  color: #53A041;
+  border-top: 0.5rem solid;
+  border-bottom: 0.5rem solid;
+  margin: 3rem 2rem 2rem 3rem;
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+  font-size: x-large;
+}
+
+.project{
+  display: inline-block;
+  flex-wrap: wrap;
+  width: min-content;
+  flex-direction: column;
+  margin: 3rem 2rem 2rem 3rem;
+  transition: .25s;
+  border: #53A041 5px solid;
+  border-radius: 4.0rem;
+  background-color: #53A041;
+}
+
+.project :hover{
+  background-color:none;
+  border: #53A041; 
+}
+
+.project .trigger{
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  background-color: aliceblue;
+  color: #53A041;
+  border:  #53A041 5px solid;
+  border-radius:4.0rem ;
+  justify-content: space-between;
+}
+
+.project .trigger::after{
+  content:""; 
+  display: block;
+  position: relative;
+  width: 2rem;
+  height: 2rem; 
+  transition: .25s;
+}
+
+.project .trigger:hover{
+  cursor: pointer;
+}
+
+.project .content{
+  overflow: hidden;
+  height: 0;
+  transition: opacity .25s ease-in-out;
+  color: #53A041;
+  display: none;
+  font-size: 1.3rem;
+  background-color: aliceblue;
+  border-radius:40px;
+  border:#1e6c0e 5px solid;
+  align-items: center;
+  margin:  1rem ;
+  
+}
+
+.project.open .content{
+  padding: 1rem 1rem 1rem 1rem;
+  display: inline-block;
+  height: 100%;
+}
+
+
